@@ -13,7 +13,7 @@ Used Ventilators:0\
 Infected Individuals:5\
 % of population:0.0000000000\
 New Deaths:0\
-Cumulative Deaths:0\
+Cumulative Deaths:0
 
 
 Day:2\
@@ -26,7 +26,7 @@ Used Ventilators:2\
 Infected Individuals:24\
 % of population:0.0001400000\
 New Deaths:0\
-Cumulative Deaths:0\
+Cumulative Deaths:0
 
 
 Day:3\
@@ -39,7 +39,7 @@ Used Ventilators:9\
 Infected Individuals:85\
 % of population:0.0004900000\
 New Deaths:2\
-Cumulative Deaths:2\
+Cumulative Deaths:2
 
 
 Day:4\
@@ -52,7 +52,7 @@ Used Ventilators:33\
 Infected Individuals:298\
 % of population:0.0016750000\
 New Deaths:10\
-Cumulative Deaths:12\
+Cumulative Deaths:12
 
 
 Day:5\
@@ -65,7 +65,7 @@ Used Ventilators:115\
 Infected Individuals:1038\
 % of population:0.0057625000\
 New Deaths:34\
-Cumulative Deaths:46\
+Cumulative Deaths:46
 
 Day:6\
 New Cases:2626\
@@ -77,7 +77,7 @@ Used Ventilators:401\
 Infected Individuals:3630\
 % of population:0.0200887500\
 New Deaths:120\
-Cumulative Deaths:166\
+Cumulative Deaths:166
 
 
 Day:7\
@@ -102,7 +102,7 @@ Used Ventilators:4912\
 Infected Individuals:44450\
 % of population:0.2456171875\
 New Deaths:1473\
-Cumulative Deaths:2060\
+Cumulative Deaths:2060
 
 
 Day:9\
@@ -115,7 +115,7 @@ Used Ventilators:10000\
 Infected Individuals:155571\
 % of population:0.8595501562\
 New Deaths:8595\
-Cumulative Deaths:10655\
+Cumulative Deaths:10655
 
 
 Day:10\
@@ -128,4 +128,4 @@ Used Ventilators:10000\
 Infected Individuals:541054\
 % of population:2.9395255469\
 New Deaths:29395\
-Cumulative Deaths:40050\
+Cumulative Deaths:40050
