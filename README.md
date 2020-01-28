@@ -90,7 +90,7 @@ Used Ventilators:1404\
 Infected Individuals:12701\
 % of population:0.0702106250\
 New Deaths:421\
-Cumulative Deaths:587\
+Cumulative Deaths:587
 
 Day:8\
 New Cases:32169\
