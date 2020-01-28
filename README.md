@@ -29,17 +29,17 @@ New Deaths:0\
 Cumulative Deaths:0\
 
 
-Day:3
-New Cases:61
-Number of Confirmed/Probable Cases:24
-Direct (Per Day) Cost to Social System:60004.89 CAD
-Cumulative Cost to Social System:73339.31 CAD
-Available Ventilators:9991
-Used Ventilators:9
-Infected Individuals:85
-% of population:0.0004900000
-New Deaths:2
-Cumulative Deaths:2
+Day:3\
+New Cases:61\
+Number of Confirmed/Probable Cases:24\
+Direct (Per Day) Cost to Social System:60004.89 CAD\
+Cumulative Cost to Social System:73339.31 CAD\
+Available Ventilators:9991\
+Used Ventilators:9\
+Infected Individuals:85\
+% of population:0.0004900000\
+New Deaths:2\
+Cumulative Deaths:2\
 
 
 Day:4\
