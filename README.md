@@ -1,7 +1,6 @@
 # corona-virus-simulator
 
 Assuming information from CDC and WHO is correct, and the R-Naught (2.5) for This new Corona Virus is correct, I have written this simple computer simulation that should give you time to prepare accordingly. This simulation is based on Toronto. If you would like me to produce one for your city, please send me a DM with your cities population, and assume you have a single case. Of course this is just a "fun" simulation I wrote so take it with a grain of salt. Also, please consider this does not take into consideration a 14 day incubation period - which would cause a delay in confirmed / probable cases. Based on this Data I recommend an N95 mask by day 8 and constant hand washing from day 6. Also this simulation does not take into consideration the time it takes to die from the virus. So death tolls are expected to lag from this simulation. This simulation also does not take into consideration the reduction in R-Naught due to those in quarantine. This will slow the initial outbreak in theory. 
-
 Day:1
 New Cases:5
 Number of Confirmed/Probable Cases:2
@@ -13,7 +12,6 @@ Infected Individuals:5
 % of population:0.0000000000
 New Deaths:0
 Cumulative Deaths:0
------------------------
 
 Day:2
 New Cases:17
@@ -26,7 +24,6 @@ Infected Individuals:24
 % of population:0.0001400000
 New Deaths:0
 Cumulative Deaths:0
------------------------
 
 Day:3
 New Cases:61
@@ -39,7 +36,6 @@ Infected Individuals:85
 % of population:0.0004900000
 New Deaths:2
 Cumulative Deaths:2
------------------------
 
 Day:4
 New Cases:214
@@ -52,7 +48,6 @@ Infected Individuals:298
 % of population:0.0016750000
 New Deaths:10
 Cumulative Deaths:12
------------------------
 
 Day:5
 New Cases:750
@@ -65,7 +60,6 @@ Infected Individuals:1038
 % of population:0.0057625000
 New Deaths:34
 Cumulative Deaths:46
------------------------
 
 Day:6
 New Cases:2626
@@ -78,7 +72,6 @@ Infected Individuals:3630
 % of population:0.0200887500
 New Deaths:120
 Cumulative Deaths:166
------------------------
 
 Day:7
 New Cases:9191
@@ -91,7 +84,6 @@ Infected Individuals:12701
 % of population:0.0702106250
 New Deaths:421
 Cumulative Deaths:587
------------------------
 
 Day:8
 New Cases:32169
@@ -104,7 +96,6 @@ Infected Individuals:44450
 % of population:0.2456171875
 New Deaths:1473
 Cumulative Deaths:2060
------------------------
 
 Day:9
 New Cases:112593
@@ -117,7 +108,7 @@ Infected Individuals:155571
 % of population:0.8595501562
 New Deaths:8595
 Cumulative Deaths:10655
------------------------
+
 
 Day:10
 New Cases:394078
@@ -130,4 +121,3 @@ Infected Individuals:541054
 % of population:2.9395255469
 New Deaths:29395
 Cumulative Deaths:40050
------------------------
