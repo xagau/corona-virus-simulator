@@ -47,36 +47,42 @@ public class Rnaught {
             //Handle the weird exception of formatting whole dollar amounts with no decimal
             currencyString = currencyString.replaceAll("\\.00", "");
 
-            System.out.println("Direct (Per Day) Cost to Social System:" + mdf.format(dayCost) + " CAD");
+            System.out.println("Direct (Per Day) Cost to Social System:" + mdf.format(Math.abs(dayCost)) + " CAD");
             charges += usedVentilators * 6667.21;
 
             String currencyString2 = NumberFormat.getCurrencyInstance().format(charges);
             //Handle the weird exception of formatting whole dollar amounts with no decimal
             currencyString2 = currencyString2.replaceAll("\\.00", "");
 
-            System.out.println("Cumulative Cost to Social System:      " + mdf.format(charges) + " CAD");
-            System.out.println("Available Ventilators:                 " + valueVentilators);
-            System.out.println("Used Ventilators:                      " + Math.abs(usedVentilators));
-            System.out.println("Infected Individuals:                  " + (int)Math.floor(newCases + infectedIndividuals));
-            System.out.println("% of population:                       " + df.format((infectedIndividuals / population)*100));
-            long newDeaths = (int)Math.floor(infectedIndividuals * mortality);
-            deaths += newDeaths;
-            System.out.println("New Deaths:                            " + newDeaths);
-            System.out.println("Cumulative Deaths:                     " + deaths);
-            System.out.println("");
-            System.out.println("");
             
             numberOfCases += newCases;
             infectedIndividuals = numberOfCases - deaths;
-            if( infectedIndividuals > population ){
+            if( infectedIndividuals >= population ){
                 infectedIndividuals = population;
+                numberOfCases = population;
+                newCases = 0;
             }
+            
             usedVentilators = (long)Math.floor(infectedIndividuals * 0.40);
             if( (numberOfVentilators - usedVentilators) < 0 ){
                 numberOfVentilators = 0;
                 usedVentilators = 10000; 
                 mortality = 0.15;
             }
+            
+            System.out.println("Cumulative Cost to Social System:      " + mdf.format(Math.abs(charges)) + " CAD");
+            System.out.println("Available Ventilators:                 " + valueVentilators);
+            System.out.println("Used Ventilators:                      " + Math.abs(usedVentilators));
+            System.out.println("Infected Individuals:                  " + (int)Math.floor(newCases + infectedIndividuals));
+            System.out.println("% of population:                       " + df.format((infectedIndividuals / population)*100));
+            long newDeaths = (int)Math.floor(infectedIndividuals * mortality);
+            deaths += newDeaths;
+            System.out.println("New Deaths:                            " + Math.abs(newDeaths));
+            System.out.println("Cumulative Deaths:                     " + Math.abs(deaths));
+            System.out.println("");
+            System.out.println("");
+            
+            
         }
         
         
