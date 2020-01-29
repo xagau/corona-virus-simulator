@@ -62,8 +62,12 @@ public class Rnaught {
                 numberOfCases = population;
                 newCases = 0;
             }
+
+            long newDeaths = (int)Math.floor(infectedIndividuals * mortality);
+            deaths += newDeaths;
             
-            usedVentilators = (long)Math.floor(infectedIndividuals * 0.40);
+            usedVentilators = (long)Math.floor(numberOfCases * 0.40);
+            usedVentilators = usedVentilators - newDeaths;
             if( (numberOfVentilators - usedVentilators) < 0 ){
                 numberOfVentilators = 0;
                 usedVentilators = 10000; 
@@ -75,8 +79,6 @@ public class Rnaught {
             System.out.println("Used Ventilators:                      " + Math.abs(usedVentilators));
             System.out.println("Infected Individuals:                  " + (int)Math.floor(newCases + infectedIndividuals));
             System.out.println("% of population:                       " + df.format((infectedIndividuals / population)*100));
-            long newDeaths = (int)Math.floor(infectedIndividuals * mortality);
-            deaths += newDeaths;
             System.out.println("New Deaths:                            " + Math.abs(newDeaths));
             System.out.println("Cumulative Deaths:                     " + Math.abs(deaths));
             System.out.println("");
