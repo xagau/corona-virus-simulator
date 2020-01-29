@@ -12,7 +12,7 @@ Used Ventilators:                      2\
 Infected Individuals:                  11\
 % of population:                       0.0001300000\
 New Deaths:                            0\
-Cumulative Deaths:                     0\
+Cumulative Deaths:                     0
 
 
 =Day:                                  2=\
@@ -25,7 +25,7 @@ Used Ventilators:                      8\
 Infected Individuals:                  35\
 % of population:                       0.0004225000\
 New Deaths:                            0\
-Cumulative Deaths:                     0\
+Cumulative Deaths:                     0
 
 
 =Day:                                  3=\
@@ -38,7 +38,7 @@ Used Ventilators:                      26\
 Infected Individuals:                  116\
 % of population:                       0.0013731250\
 New Deaths:                            1\
-Cumulative Deaths:                     1\
+Cumulative Deaths:                     1
 
 
 =Day:                                  4=\
@@ -51,7 +51,7 @@ Used Ventilators:                      85\
 Infected Individuals:                  376\
 % of population:                       0.0044426562\
 New Deaths:                            4\
-Cumulative Deaths:                     5\
+Cumulative Deaths:                     5
 
 
 =Day:                                  5=\
@@ -64,7 +64,7 @@ Used Ventilators:                      275\
 Infected Individuals:                  1222\
 % of population:                       0.0144036328\
 New Deaths:                            15\
-Cumulative Deaths:                     20\
+Cumulative Deaths:                     20
 
 
 =Day:                                  6=\
@@ -77,7 +77,7 @@ Used Ventilators:                      893\
 Infected Individuals:                  3968\
 % of population:                       0.0467368066\
 New Deaths:                            49\
-Cumulative Deaths:                     69\
+Cumulative Deaths:                     69
 
 
 =Day:                                  7=\
@@ -90,7 +90,7 @@ Used Ventilators:                      2904\
 Infected Individuals:                  12893\
 % of population:                       0.1518146216\
 New Deaths:                            159\
-Cumulative Deaths:                     228\
+Cumulative Deaths:                     228
 
 
 =Day:                                  8=\
@@ -103,7 +103,7 @@ Used Ventilators:                      9440\
 Infected Individuals:                  41900\
 % of population:                       0.4933225201\
 New Deaths:                            517\
-Cumulative Deaths:                     745\
+Cumulative Deaths:                     745
 
 
 =Day:                                  9=\
@@ -116,7 +116,7 @@ Used Ventilators:                      10000\
 Infected Individuals:                  136172\
 % of population:                       1.6032181905\
 New Deaths:                            1683\
-Cumulative Deaths:                     2428\
+Cumulative Deaths:                     2428
 
 
 =Day:                                  10=\
