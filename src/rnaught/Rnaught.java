@@ -25,7 +25,7 @@ public class Rnaught {
         double rnaught = 2.5;
         long numberOfVentilators = 10000;
         long usedVentilators = 0;
-        long days = 30;
+        long days = 11;
         long deaths = 0;
         double mortality = 0.021;
         double charges = 0;
@@ -72,13 +72,12 @@ public class Rnaught {
             usedVentilators = (long)Math.floor(numberOfCases * 0.40);
             usedVentilators = usedVentilators - newDeaths;
             if( (numberOfVentilators - usedVentilators) < 0 ){
-                numberOfVentilators = 0;
                 usedVentilators = 10000; 
                 mortality = 0.15;
             }
             
             System.out.println("Cumulative Cost to Social System:      " + mdf.format(Math.abs(charges)) + " " + currencySymbol);
-            System.out.println("Available Ventilators:                 " + valueVentilators);
+            System.out.println("Available Ventilators:                 " + (numberOfVentilators - usedVentilators));
             System.out.println("Used Ventilators:                      " + Math.abs(usedVentilators));
             System.out.println("Infected Individuals:                  " + (int)Math.floor(newCases + infectedIndividuals));
             System.out.println("% of population:                       " + df.format((infectedIndividuals / population)*100));
