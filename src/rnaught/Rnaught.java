@@ -25,9 +25,9 @@ public class Rnaught {
         double rnaught = 2.5;
         long numberOfVentilators = 10000;
         long usedVentilators = 0;
-        long days = 11;
+        long days = 30;
         long deaths = 0;
-        double mortality = 0.03;
+        double mortality = 0.021;
         double charges = 0;
         
         for( long i = 1; i < days; i++ ){
@@ -68,11 +68,14 @@ public class Rnaught {
             
             numberOfCases += newCases;
             infectedIndividuals = numberOfCases - deaths;
+            if( infectedIndividuals > population ){
+                infectedIndividuals = population;
+            }
             usedVentilators = (long)Math.floor(infectedIndividuals * 0.40);
             if( (numberOfVentilators - usedVentilators) < 0 ){
                 numberOfVentilators = 0;
                 usedVentilators = 10000; 
-                mortality = 0.20;
+                mortality = 0.15;
             }
         }
         
