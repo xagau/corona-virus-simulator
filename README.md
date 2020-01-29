@@ -2,130 +2,131 @@
 
 Assuming information from CDC and WHO is correct, and the R-Naught (2.5) for This new Corona Virus is correct, I have written this simple computer simulation that should give you time to prepare accordingly. This simulation is based on Toronto. If you would like me to produce one for your city, please send me a DM with your cities population, and assume you have a single case. Of course this is just a "fun" simulation I wrote so take it with a grain of salt. Also, please consider this does not take into consideration a 14 day incubation period - which would cause a delay in confirmed / probable cases. Based on this Data I recommend an N95 mask by day 8 and constant hand washing from day 6. Also this simulation does not take into consideration the time it takes to die from the virus. So death tolls are expected to lag from this simulation. This simulation also does not take into consideration the reduction in R-Naught due to those in quarantine. This will slow the initial outbreak in theory. 
 
+=Day:                                  1=
+Number of Confirmed/Probable Cases:    2
+New/Undetected Cases:                             5
+Direct (Per Day) Cost to Social System:0.00 CAD
+Cumulative Cost to Social System:      0.00 CAD
+Available Ventilators:                 9998
+Used Ventilators:                      2
+Infected Individuals:                  11
+% of population:                       0.0001300000
+New Deaths:                            0
+Cumulative Deaths:                     0
 
-Day:1\
-New Cases:5\
-Number of Confirmed/Probable Cases:2\
-Direct (Per Day) Cost to Social System:0.00 CAD\
-Cumulative Cost to Social System:0.00 CAD\
-Available Ventilators:10000\
-Used Ventilators:0\
-Infected Individuals:5\
-% of population:0.0000000000\
-New Deaths:0\
-Cumulative Deaths:0
 
-
-Day:2\
-New Cases:17\
-Number of Confirmed/Probable Cases:7\
+=Day:                                  2=\
+Number of Confirmed/Probable Cases:    6\
+New/Undetected Cases:                             16\
 Direct (Per Day) Cost to Social System:13334.42 CAD\
-Cumulative Cost to Social System:13334.42 CAD\
-Available Ventilators:9998\
-Used Ventilators:2\
-Infected Individuals:24\
-% of population:0.0001400000\
-New Deaths:0\
-Cumulative Deaths:0
+Cumulative Cost to Social System:      13334.42 CAD\
+Available Ventilators:                 9992\
+Used Ventilators:                      8\
+Infected Individuals:                  35\
+% of population:                       0.0004225000\
+New Deaths:                            0\
+Cumulative Deaths:                     0\
 
 
-Day:3\
-New Cases:61\
-Number of Confirmed/Probable Cases:24\
-Direct (Per Day) Cost to Social System:60004.89 CAD\
-Cumulative Cost to Social System:73339.31 CAD\
-Available Ventilators:9991\
-Used Ventilators:9\
-Infected Individuals:85\
-% of population:0.0004900000\
-New Deaths:2\
-Cumulative Deaths:2
+=Day:                                  3=\
+Number of Confirmed/Probable Cases:    21\
+New/Undetected Cases:                             52\
+Direct (Per Day) Cost to Social System:53337.68 CAD\
+Cumulative Cost to Social System:      66672.10 CAD\
+Available Ventilators:                 9974\
+Used Ventilators:                      26\
+Infected Individuals:                  116\
+% of population:                       0.0013731250\
+New Deaths:                            1\
+Cumulative Deaths:                     1\
 
 
-Day:4\
-New Cases:214\
-Number of Confirmed/Probable Cases:85\
-Direct (Per Day) Cost to Social System:220017.93 CAD\
-Cumulative Cost to Social System:293357.24 CAD\
-Available Ventilators:9967\
-Used Ventilators:33\
-Infected Individuals:298\
-% of population:0.0016750000\
-New Deaths:10\
-Cumulative Deaths:12
+=Day:                                  4=\
+Number of Confirmed/Probable Cases:    68\
+New/Undetected Cases:                             171\
+Direct (Per Day) Cost to Social System:173347.46 CAD\
+Cumulative Cost to Social System:      240019.56 CAD\
+Available Ventilators:                 9915\
+Used Ventilators:                      85\
+Infected Individuals:                  376\
+% of population:                       0.0044426562\
+New Deaths:                            4\
+Cumulative Deaths:                     5\
 
 
-Day:5\
-New Cases:750\
-Number of Confirmed/Probable Cases:300\
-Direct (Per Day) Cost to Social System:766729.15 CAD\
-Cumulative Cost to Social System:1060086.39 CAD\
-Available Ventilators:9885\
-Used Ventilators:115\
-Infected Individuals:1038\
-% of population:0.0057625000\
-New Deaths:34\
-Cumulative Deaths:46
-
-Day:6\
-New Cases:2626\
-Number of Confirmed/Probable Cases:1050\
-Direct (Per Day) Cost to Social System:2673551.21 CAD\
-Cumulative Cost to Social System:3733637.60 CAD\
-Available Ventilators:9599\
-Used Ventilators:401\
-Infected Individuals:3630\
-% of population:0.0200887500\
-New Deaths:120\
-Cumulative Deaths:166
+=Day:                                  5=\
+Number of Confirmed/Probable Cases:    223\
+New/Undetected Cases:                             557\
+Direct (Per Day) Cost to Social System:566712.85 CAD\
+Cumulative Cost to Social System:      806732.41 CAD\
+Available Ventilators:                 9725\
+Used Ventilators:                      275\
+Infected Individuals:                  1222\
+% of population:                       0.0144036328\
+New Deaths:                            15\
+Cumulative Deaths:                     20\
 
 
-Day:7\
-New Cases:9191\
-Number of Confirmed/Probable Cases:3676\
-Direct (Per Day) Cost to Social System:9360762.84 CAD\
-Cumulative Cost to Social System:13094400.44 CAD\
-Available Ventilators:8596\
-Used Ventilators:1404\
-Infected Individuals:12701\
-% of population:0.0702106250\
-New Deaths:421\
-Cumulative Deaths:587
-
-Day:8\
-New Cases:32169\
-Number of Confirmed/Probable Cases:12867\
-Direct (Per Day) Cost to Social System:32749335.52 CAD\
-Cumulative Cost to Social System:45843735.96 CAD\
-Available Ventilators:5088\
-Used Ventilators:4912\
-Infected Individuals:44450\
-% of population:0.2456171875\
-New Deaths:1473\
-Cumulative Deaths:2060
+=Day:                                  6=\
+Number of Confirmed/Probable Cases:    725\
+New/Undetected Cases:                             1812\
+Direct (Per Day) Cost to Social System:1833482.75 CAD\
+Cumulative Cost to Social System:      2640215.16 CAD\
+Available Ventilators:                 9107\
+Used Ventilators:                      893\
+Infected Individuals:                  3968\
+% of population:                       0.0467368066\
+New Deaths:                            49\
+Cumulative Deaths:                     69\
 
 
-Day:9\
-New Cases:112593\
-Number of Confirmed/Probable Cases:45037\
+=Day:                                  7=\
+Number of Confirmed/Probable Cases:    2356\
+New/Undetected Cases:                             5892\
+Direct (Per Day) Cost to Social System:5953818.53 CAD\
+Cumulative Cost to Social System:      8594033.69 CAD\
+Available Ventilators:                 7096\
+Used Ventilators:                      2904\
+Infected Individuals:                  12893\
+% of population:                       0.1518146216\
+New Deaths:                            159\
+Cumulative Deaths:                     228\
+
+
+=Day:                                  8=\
+Number of Confirmed/Probable Cases:    7659\
+New/Undetected Cases:                             19149\
+Direct (Per Day) Cost to Social System:19361577.84 CAD\
+Cumulative Cost to Social System:      27955611.53 CAD\
+Available Ventilators:                 560\
+Used Ventilators:                      9440\
+Infected Individuals:                  41900\
+% of population:                       0.4933225201\
+New Deaths:                            517\
+Cumulative Deaths:                     745\
+
+
+=Day:                                  9=\
+Number of Confirmed/Probable Cases:    24894\
+New/Undetected Cases:                             62235\
+Direct (Per Day) Cost to Social System:62938462.40 CAD\
+Cumulative Cost to Social System:      90894073.93 CAD\
+Available Ventilators:                 0\
+Used Ventilators:                      10000\
+Infected Individuals:                  136172\
+% of population:                       1.6032181905\
+New Deaths:                            1683\
+Cumulative Deaths:                     2428\
+
+
+=Day:                                  10=\
+Number of Confirmed/Probable Cases:    80905\
+New/Undetected Cases:                             202264\
 Direct (Per Day) Cost to Social System:66672100.00 CAD\
-Cumulative Cost to Social System:112515835.96 CAD\
-Available Ventilators:0\
-Used Ventilators:10000\
-Infected Individuals:155571\
-% of population:0.8595501562\
-New Deaths:8595\
-Cumulative Deaths:10655
-
-
-Day:10\
-New Cases:394078\
-Number of Confirmed/Probable Cases:157631\
-Direct (Per Day) Cost to Social System:66672100.00 CAD\
-Cumulative Cost to Social System:179187935.96 CAD\
-Available Ventilators:0\
-Used Ventilators:10000\
-Infected Individuals:541054\
-% of population:2.9395255469\
-New Deaths:29395\
-Cumulative Deaths:40050
+Cumulative Cost to Social System:      157566173.93 CAD\
+Available Ventilators:                 0\
+Used Ventilators:                      10000\
+Infected Individuals:                  442554\
+% of population:                       5.2103241190\
+New Deaths:                            39077\
+Cumulative Deaths:                     41505
