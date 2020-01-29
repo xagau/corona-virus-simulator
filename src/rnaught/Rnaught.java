@@ -30,6 +30,9 @@ public class Rnaught {
         double mortality = 0.021;
         double charges = 0;
         
+        double ventilatorPerDayCost = 6667.21;
+        String currencySymbol = "CAD";
+        
         for( long i = 1; i < days; i++ ){
             double newCases = numberOfCases * rnaught;
             DecimalFormat df = new DecimalFormat("0.0000000000");
@@ -42,12 +45,12 @@ public class Rnaught {
                 valueVentilators = 0;
             }
             
-            double dayCost = usedVentilators * 6667.21;
+            double dayCost = usedVentilators * ventilatorPerDayCost;
             String currencyString = NumberFormat.getCurrencyInstance().format(dayCost);
             //Handle the weird exception of formatting whole dollar amounts with no decimal
             currencyString = currencyString.replaceAll("\\.00", "");
 
-            System.out.println("Direct (Per Day) Cost to Social System:" + mdf.format(Math.abs(dayCost)) + " CAD");
+            System.out.println("Direct (Per Day) Cost to Social System:" + mdf.format(Math.abs(dayCost)) + " " + currencySymbol);
             charges += usedVentilators * 6667.21;
 
             String currencyString2 = NumberFormat.getCurrencyInstance().format(charges);
@@ -74,7 +77,7 @@ public class Rnaught {
                 mortality = 0.15;
             }
             
-            System.out.println("Cumulative Cost to Social System:      " + mdf.format(Math.abs(charges)) + " CAD");
+            System.out.println("Cumulative Cost to Social System:      " + mdf.format(Math.abs(charges)) + " " + currencySymbol);
             System.out.println("Available Ventilators:                 " + valueVentilators);
             System.out.println("Used Ventilators:                      " + Math.abs(usedVentilators));
             System.out.println("Infected Individuals:                  " + (int)Math.floor(newCases + infectedIndividuals));
