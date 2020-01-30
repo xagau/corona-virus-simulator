@@ -12,7 +12,7 @@ import java.text.NumberFormat;
  *
  * @author Sean Beecroft
  */
-public class Rnaught {
+public class Rnought {
 
     /**
      * @param args the command line arguments
@@ -29,6 +29,7 @@ public class Rnaught {
         long deaths = 0;
         double mortality = 0.021;
         double charges = 0;
+        double quarentineQuotient = 0.90;
         
         double ventilatorPerDayCost = 6667.21;
         String currencySymbol = "CAD";
@@ -38,8 +39,8 @@ public class Rnaught {
             DecimalFormat df = new DecimalFormat("0.0000000000");
             DecimalFormat mdf = new DecimalFormat("0.00");
             System.out.println("=Day:                                  " + i + "=");
-            System.out.println("New Cases:                             " + (int)Math.floor(newCases));
             System.out.println("Number of Confirmed/Probable Cases:    " + (int)Math.floor(numberOfCases));
+            System.out.println("New/Undetected Cases:                             " + (int)Math.floor(newCases));
             long valueVentilators = (long)Math.floor(numberOfVentilators-usedVentilators);
             if( valueVentilators < 0 ) { 
                 valueVentilators = 0;
@@ -57,8 +58,9 @@ public class Rnaught {
             //Handle the weird exception of formatting whole dollar amounts with no decimal
             currencyString2 = currencyString2.replaceAll("\\.00", "");
 
-            
+            newCases = newCases * quarentineQuotient;
             numberOfCases += newCases;
+            
             infectedIndividuals = numberOfCases - deaths;
             if( infectedIndividuals >= population ){
                 infectedIndividuals = population;
