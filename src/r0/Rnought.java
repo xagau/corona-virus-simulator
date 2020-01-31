@@ -22,14 +22,14 @@ public class Rnought {
         double numberOfCases = 2;
         double infectedIndividuals = 0;
         double population = 5000000;
-        double rnaught = 2.5;
-        long numberOfVentilators = 10000;
+        double rnaught = 4.1;
+        long numberOfVentilators = 1000;
         long usedVentilators = 0;
         long days = 11;
         long deaths = 0;
         double mortality = 0.021;
         double charges = 0;
-        double quarentineQuotient = 0.90;
+        double quarentineQuotient = 0.85;
         
         double ventilatorPerDayCost = 6667.21;
         String currencySymbol = "CAD";
@@ -74,7 +74,7 @@ public class Rnought {
             usedVentilators = (long)Math.floor(numberOfCases * 0.40);
             usedVentilators = usedVentilators - newDeaths;
             if( (numberOfVentilators - usedVentilators) < 0 ){
-                usedVentilators = 10000; 
+                usedVentilators = 1000; 
                 mortality = 0.15;
             }
             
