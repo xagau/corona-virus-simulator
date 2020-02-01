@@ -25,21 +25,24 @@ public class Rnought {
         double rnaught = 4.1;
         long numberOfVentilators = 1000;
         long usedVentilators = 0;
-        long days = 11;
+        long days = 30;
         long deaths = 0;
-        double mortality = 0.021;
+        double mortality = 0.065;
         double charges = 0;
+        double latency = 0.15;
+        double deathLatency = 0.07;
+        
         double quarentineQuotient = 0.85;
         
         double ventilatorPerDayCost = 6667.21;
         String currencySymbol = "CAD";
         
         for( long i = 1; i < days; i++ ){
-            double newCases = numberOfCases * rnaught;
+            double newCases = numberOfCases * rnaught * latency;
             DecimalFormat df = new DecimalFormat("0.0000000000");
             DecimalFormat mdf = new DecimalFormat("0.00");
             System.out.println("=Day:                                  " + i + "=");
-            System.out.println("Number of Confirmed/Probable Cases:    " + (int)Math.floor(numberOfCases));
+            System.out.println("Number of Confirmed/Probable Cases:    " + (int)Math.floor(numberOfCases * latency));
             System.out.println("New/Undetected Cases:                             " + (int)Math.floor(newCases));
             long valueVentilators = (long)Math.floor(numberOfVentilators-usedVentilators);
             if( valueVentilators < 0 ) { 
@@ -59,7 +62,7 @@ public class Rnought {
             currencyString2 = currencyString2.replaceAll("\\.00", "");
 
             newCases = newCases * quarentineQuotient;
-            numberOfCases += newCases;
+            //numberOfCases += newCases;
             
             infectedIndividuals = numberOfCases - deaths;
             if( infectedIndividuals >= population ){
@@ -68,7 +71,7 @@ public class Rnought {
                 newCases = 0;
             }
 
-            long newDeaths = (int)Math.floor(infectedIndividuals * mortality);
+            long newDeaths = (int)Math.floor(infectedIndividuals * mortality * deathLatency);
             deaths += newDeaths;
             
             usedVentilators = (long)Math.floor(numberOfCases * 0.40);
@@ -88,7 +91,7 @@ public class Rnought {
             System.out.println("");
             System.out.println("");
             
-            
+            numberOfCases += newCases;
         }
         
         
