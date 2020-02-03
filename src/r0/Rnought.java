@@ -2,6 +2,11 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ *
+ *
+ * These numbers have been tweaked to reflect numbers being published.
+ * The purpose is to predict the outbreak into future days.
+ *
  */
 package r0;
 
@@ -19,31 +24,34 @@ public class Rnought {
      */
     public static void main(String[] args) {
         // TODO code application logic 
-        double numberOfCases = 2;
-        double infectedIndividuals = 0;
-        double population = 5000000;
-        double rnaught = 4.1;
-        long numberOfVentilators = 1000;
+        double numberOfCases = 1;
+        double infectedIndividuals = 1;
+        long population = 7000000000L;
+        double rnought = 4.08 ; // 3.5;
+        long numberOfVentilators = 10000;
         long usedVentilators = 0;
-        long days = 30;
-        long deaths = 0;
-        double mortality = 0.065;
+        long days = 32;
+        double deaths = 0;
+        double mortality = 1.18;
+        double complications = 0.33;
         double charges = 0;
-        double latency = 0.15;
-        double deathLatency = 0.07;
+        double latency = 0.317;
+        double deathLatency = 0.0865;
         
-        double quarentineQuotient = 0.85;
+        //double quarentineQuotient = 0.15;
         
         double ventilatorPerDayCost = 6667.21;
         String currencySymbol = "CAD";
         
+        
         for( long i = 1; i < days; i++ ){
-            double newCases = numberOfCases * rnaught * latency;
+            double newCases = infectedIndividuals * ((rnought))  ;
             DecimalFormat df = new DecimalFormat("0.0000000000");
             DecimalFormat mdf = new DecimalFormat("0.00");
-            System.out.println("=Day:                                  " + i + "=");
-            System.out.println("Number of Confirmed/Probable Cases:    " + (int)Math.floor(numberOfCases * latency));
-            System.out.println("New/Undetected Cases:                             " + (int)Math.floor(newCases));
+            System.out.println("=Day:                                      " + i + "=");
+            System.out.println("Number of Confirmed/Probable Cases:        " + (int)Math.floor(numberOfCases));
+            System.out.println("Infected Individuals with Complications:   " + (int)Math.floor((numberOfCases * complications )));
+            System.out.println("New/Undetected Cases:                      " + (int)Math.floor(newCases));
             long valueVentilators = (long)Math.floor(numberOfVentilators-usedVentilators);
             if( valueVentilators < 0 ) { 
                 valueVentilators = 0;
@@ -61,24 +69,26 @@ public class Rnought {
             //Handle the weird exception of formatting whole dollar amounts with no decimal
             currencyString2 = currencyString2.replaceAll("\\.00", "");
 
-            newCases = newCases * quarentineQuotient;
+            //newCases = newCases * quarentineQuotient;
             //numberOfCases += newCases;
             
-            infectedIndividuals = numberOfCases - deaths;
+            infectedIndividuals = infectedIndividuals * rnought * latency;
+            
             if( infectedIndividuals >= population ){
                 infectedIndividuals = population;
                 numberOfCases = population;
                 newCases = 0;
             }
 
-            long newDeaths = (int)Math.floor(infectedIndividuals * mortality * deathLatency);
+            double newDeaths = Math.floor(infectedIndividuals * complications * mortality * deathLatency);
+            infectedIndividuals = infectedIndividuals - newDeaths;
             deaths += newDeaths;
             
-            usedVentilators = (long)Math.floor(numberOfCases * 0.40);
-            usedVentilators = usedVentilators - newDeaths;
+            usedVentilators = (long)Math.floor(numberOfCases * complications);
+            usedVentilators = usedVentilators - (long)newDeaths;
             if( (numberOfVentilators - usedVentilators) < 0 ){
-                usedVentilators = 1000; 
-                mortality = 0.15;
+                usedVentilators = 10000; 
+                mortality = 0.20;
             }
             
             System.out.println("Cumulative Cost to Social System:      " + mdf.format(Math.abs(charges)) + " " + currencySymbol);
@@ -92,6 +102,7 @@ public class Rnought {
             System.out.println("");
             
             numberOfCases += newCases;
+            
         }
         
         
