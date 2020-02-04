@@ -30,13 +30,13 @@ public class Rnought {
         double rnought = 4.08 ; // 3.5;
         long numberOfVentilators = 10000;
         long usedVentilators = 0;
-        long days = 32;
+        long days = 50;
         double deaths = 0;
-        double mortality = 1.18;
-        double complications = 0.33;
+        double mortality = 1.60;
+        double complications = 0.39;
         double charges = 0;
-        double latency = 0.317;
-        double deathLatency = 0.0865;
+        double latency = 0.319;
+        double deathLatency = 0.085;
         
         //double quarentineQuotient = 0.15;
         
@@ -81,7 +81,7 @@ public class Rnought {
             }
 
             double newDeaths = Math.floor(infectedIndividuals * complications * mortality * deathLatency);
-            infectedIndividuals = infectedIndividuals - newDeaths;
+            infectedIndividuals = ( infectedIndividuals ) - newDeaths;
             deaths += newDeaths;
             
             usedVentilators = (long)Math.floor(numberOfCases * complications);
@@ -94,7 +94,7 @@ public class Rnought {
             System.out.println("Cumulative Cost to Social System:      " + mdf.format(Math.abs(charges)) + " " + currencySymbol);
             System.out.println("Available Ventilators:                 " + (numberOfVentilators - usedVentilators));
             System.out.println("Used Ventilators:                      " + Math.abs(usedVentilators));
-            System.out.println("Infected Individuals:                  " + (int)Math.floor(newCases + infectedIndividuals));
+            System.out.println("Infected Individuals:                  " + (int)Math.floor(numberOfCases + infectedIndividuals));
             System.out.println("% of population:                       " + df.format((infectedIndividuals / population)*100));
             System.out.println("New Deaths:                            " + Math.abs(newDeaths));
             System.out.println("Cumulative Deaths:                     " + Math.abs(deaths));
